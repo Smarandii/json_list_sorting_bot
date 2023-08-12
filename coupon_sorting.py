@@ -16,7 +16,7 @@ def update_item_numbers(input_string):
 def save_as_json(input_string):
     updated_items = update_item_numbers(input_string)
     json_output = json.dumps(updated_items, indent=0, ensure_ascii=False)
-    file_name = f"outputs/output_{datetime.datetime.now().timestamp()}"
+    file_name = f"outputs/output_{datetime.datetime.now().timestamp()}.json"
     with open(file_name, "w", encoding="utf-8") as json_file:
         json_file.write(json_output)
     return file_name
